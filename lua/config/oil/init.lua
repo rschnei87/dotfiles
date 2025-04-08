@@ -2,7 +2,7 @@ local oil = require("oil")
 
 oil.setup({
   keymaps = {
-    ["<CR>"] = { "actions.select" }, --opts = { close = true, tab = true } }, --, opts = { tab = true } },
+    ["<CR>"] = { "actions.select", opts = { close = true } },
   },
   view_options = {
     show_hidden = true,
@@ -15,5 +15,9 @@ vim.api.nvim_create_user_command("Explore", function(opts)
 end, { nargs = "?" })
 
 vim.keymap.set("n", "<leader>e", function()
-  oil.open(".")
+  if vim.bo.filetype == 'oil' then
+    oil.close()
+  else
+    oil.open(".")
+  end
 end, { noremap = true , silent = true , desc = "Toggle Oil" })
