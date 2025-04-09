@@ -89,5 +89,28 @@ return {
       require("config.lualine")
     end,
   },
-  
+
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-ui-select.nvim",
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+      },
+    },
+    config = function()
+      require("config.telescope")
+    end,
+  },
+
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = function()
+      require("config.toggleterm")
+    end,
+  },
+
 }
