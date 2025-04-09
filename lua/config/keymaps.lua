@@ -1,5 +1,5 @@
-vim.keymap.set("n", "<Tab>", "<CMD>bn<CR>")
-vim.keymap.set("n", "<S-Tab>", "<CMD>bpp<CR>")
+--vim.keymap.set("n", "<Tab>", "<CMD>bn<CR>")
+--vim.keymap.set("n", "<S-Tab>", "<CMD>bpp<CR>")
 
 vim.keymap.set("n", "<leader>x", "<CMD>bd<CR>", { desc = "Close buffer" })
 

@@ -31,6 +31,18 @@ return {
   },
 
   {
+    "saghen/blink.cmp",
+    version = "*",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+      "mikavilpas/blink-ripgrep.nvim",
+    },
+    config = function()
+      require("config.blink")
+    end,
+    event = "InsertEnter"
+  },
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
       "williamboman/mason.nvim",
@@ -43,19 +55,6 @@ return {
     end,
     event = { "BufReadPost", "BufNewFile" },
     cmd = { "LspInfo", "LspInstall", "LspUninstall", "Mason" },
-  },
-  {
-    "saghen/blink.cmp",
-    version = "*",
-    dependencies = {
-      "fang2hou/blink-copilot",
-      "rafamadriz/friendly-snippets",
-      "mikavilpas/blink-ripgrep.nvim",
-    },
-    config = function()
-      require("config.blink")
-    end,
-    event = "InsertEnter",
   },
   {
     "folke/which-key.nvim",
