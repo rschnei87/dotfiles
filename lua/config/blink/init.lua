@@ -10,7 +10,7 @@ blink.setup({
     ["<Down>"] = { "scroll_documentation_down", "fallback" },
   },
   sources = {
-    default = { "lsp", "path", "ripgrep", "snippets", "buffer" },
+    default = { "lsp", "path", "ripgrep" },--, "snippets", "buffer" },
     providers = {
       ripgrep = {
         module = "blink-ripgrep",
