@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>x", "<CMD>bd<CR>", { desc = "Close buffer" })
 
 vim.keymap.set("n", "<leader>vs", "<CMD>vnew<CR>",  { noremap = true, desc = "Vertical split" })
 vim.keymap.set("n", "<leader>hs", "<CMD>new<CR>", { noremap = true, desc = "Horizontal split" })
+vim.keymap.set("n", "QQ", "<CMD>qa!<CR>", { noremap = true, desc = "Close without saving" })
 
 vim.api.nvim_set_keymap("n", "<C-k>", ":wincmd k<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<C-j>", ":wincmd j<CR>", { silent = true })

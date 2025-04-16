@@ -10,6 +10,15 @@ return {
         plugins = {
           auto = true,
         },
+        on_highlights = function(highlights, colors)
+          highlights.VertSplit = {
+            fg = "#362d60"
+          }
+          highlights.WinSeparator = {
+            bold = true,
+            fg = "#362d60"
+          }
+        end,
       })
       vim.cmd("colorscheme tokyonight")
     end,
