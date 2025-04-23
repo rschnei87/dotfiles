@@ -120,5 +120,15 @@ return {
       require("config.toggleterm")
     end,
   },
+ 
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("config.indent-blankline")
+    end,
+  },
 
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+  },
 }
