@@ -131,4 +131,8 @@ return {
   {
     "HiPhish/rainbow-delimiters.nvim",
   },
+
+  {
+    "towolf/vim-helm",
+  },
 }

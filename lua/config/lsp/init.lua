@@ -3,6 +3,7 @@ require("mason-lspconfig").setup({
   automatic_installation = true,
   ensure_installed = {
     "rust_analyzer",
+    "helm_ls",
   },
 })
 
@@ -30,5 +31,9 @@ lspconfig.rust_analyzer.setup({
             },
         }
     }
+})
+
+lspconfig.helm_ls.setup({
+  capabilities = capabilities,
 })
 
