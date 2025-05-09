@@ -148,4 +148,25 @@ return {
     end,
     event = "BufReadPost",
   },
+
+  {
+    "folke/trouble.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("config.trouble")
+    end,
+    event = "VeryLazy",
+  },
+
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+--    event = "LspAttach",
+    priority = 1000,
+    config = function()
+      require("config.diagnostic")
+    end,
+  },
 }

@@ -4,6 +4,9 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "rust_analyzer",
     "helm_ls",
+    "ts_ls",
+    "html",
+    "angularls",
   },
 })
 
@@ -37,3 +40,16 @@ lspconfig.helm_ls.setup({
   capabilities = capabilities,
 })
 
+lspconfig.ts_ls.setup({
+  capabilities = capabilities,
+})
+
+lspconfig.html.setup({
+  capabilities = capabilities,
+})
+
+
+lspconfig.angularls.setup({
+  capabilities = capabilities,
+  filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx", "angular" },
+})
