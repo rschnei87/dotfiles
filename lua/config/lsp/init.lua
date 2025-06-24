@@ -12,6 +12,20 @@ require("mason-lspconfig").setup({
 
 local lspconfig = require("lspconfig")
 
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+    callback = function(ev)
+        local bufnr = ev.buf
+        local opts = { noremap = true, silent = true, buffer = bufnr }
+
+        vim.api.nvim_set_option_value("omnifunc", "v:lua.vim.lsp.omnifunc", { buf = bufnr })
+
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+        vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
+    end,
+})
+
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 lspconfig.rust_analyzer.setup({
