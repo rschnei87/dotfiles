@@ -18,6 +18,6 @@ vim.keymap.set("n", "<leader>e", function()
   if vim.bo.filetype == 'oil' then
     oil.close()
   else
-    oil.open(".")
+    oil.open()
   end
 end, { noremap = true , silent = true , desc = "Toggle Oil" })
