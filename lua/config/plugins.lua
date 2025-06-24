@@ -169,4 +169,13 @@ return {
       require("config.diagnostic")
     end,
   },
+
+  {
+    "stevearc/conform.nvim",
+    config = function()
+      require("config.conform")
+    end,
+    event = "BufWritePre",
+    cmd = "ConformInfo",
+  },
 }

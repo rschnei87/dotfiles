@@ -6,9 +6,10 @@ vim.opt.splitright = true
 
 vim.opt.wrap = false
 
-vim.opt.expandtab = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.expandtab = true
 
 vim.opt.clipboard = "unnamedplus"
 
