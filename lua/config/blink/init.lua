@@ -5,7 +5,7 @@ blink.setup({
     preset = "none",
     ["<S-Tab>"] = { "select_prev", "fallback" },
     ["<Tab>"] = { "select_next", "fallback" },
-    ["<C-->"] = { "select_and_accept", "fallback" },
+    ["<C-p>"] = { "select_and_accept", "fallback" },
     ["<Esc>"] = { "hide", "fallback" },
     ["<Up>"] = { "scroll_documentation_up", "fallback" },
     ["<Down>"] = { "scroll_documentation_down", "fallback" },
